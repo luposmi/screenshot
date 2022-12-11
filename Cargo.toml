@@ -1,0 +1,61 @@
+debugprinttime = true
+[package]
+name = "screenshot"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+x11 = "2.20.1"
+image = "0.24.5"
+
+
+[build-dependencies]
+cc = { version = "1.0", features = ["parallel"] }
+pkg-config = "0.3"
+cmake = "0.1"
+
+[features]
+printtime = []
+
+
+default = ["xrandr","xlib","printtime"]
+
+#x11
+xall = ["dpms", 
+        "glx", 
+        "xcursor", 
+        "xf86vmode", 
+        "xft", 
+        "xinerama", 
+        "xinput", 
+        "xlib", 
+        "xlib_xcb", 
+        "xmu", 
+        "xrandr", 
+        "xrecord",
+        "xrender", 
+        "xss", 
+        "xt", 
+        "xtest", 
+        "xtst", 
+        "dox"]
+dpms = []
+glx = []
+xcursor = []
+xf86vmode = []
+xft = []
+xinerama = []
+xinput = []
+xlib = []
+xlib_xcb = []
+xmu = []
+xrandr = []
+xrecord = ["xtst"]
+xrender = []
+xss = []
+xt = []
+xtest = ["xtst"]
+xtst = []
+dox = [] 
