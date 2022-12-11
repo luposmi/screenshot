@@ -19,7 +19,7 @@ cmake = "0.1"
 printtime = []
 
 
-default = ["xrandr","xlib","printtime"]
+default = ["xrandr","xlib"]
 
 #x11
 xall = ["dpms", 
